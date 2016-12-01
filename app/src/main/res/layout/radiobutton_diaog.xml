@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="500dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/titlefordialog"
+        android:text="Measurement"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+
+        android:id="@+id/radio_group"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlefordialog"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+      >
+        <RadioButton
+            android:id="@+id/button_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/button_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/button_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layoutIcons"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/radio_group"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:id="@+id/deleteIcon"
+            android:src="@drawable/trach_icon"
+            android:background="@drawable/pressed_icon"
+            android:layout_margin="5dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/editingName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/layoutIcons"
+        android:layout_alignParentStart="true"
+       >
+
+        <EditText
+            android:id="@+id/changeName"
+            android:text="Sensor Temperature"
+            android:layout_width="240dp"
+            android:layout_margin="10dp"
+            android:layout_height="50dp"
+
+
+            android:focusableInTouchMode="false"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="36dp" />
+
+        <ImageButton
+            android:id="@+id/clickToEdit"
+            android:src="@drawable/editclick"
+            android:background="@drawable/pressed_icon"
+            android:layout_margin="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/changeName" />
+
+    </RelativeLayout>
+    <CheckBox
+        android:id="@+id/enable_alert"
+        android:text="Enable Alert"
+        android:layout_margin="10dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editingName"
+        />
+    <RelativeLayout
+        android:id="@+id/alertz"
+        android:visibility="gone"
+        android:layout_width="240dp"
+        android:layout_below="@id/enable_alert"
+        android:layout_height="wrap_content"
+        >
+
+
+        <TextView
+            android:id="@+id/min"
+            android:text="Triggers"
+            android:textSize="20sp"
+
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp"
+
+
+            />
+        <ListView
+            android:id="@+id/triggersavedSettings"
+            android:layout_below="@id/min"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+        <Button
+            android:id="@+id/addTrigger"
+            android:text="Add"
+            android:layout_below="@id/triggersavedSettings"
+            android:background="@drawable/pressed_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+             />
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/satellite"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/editingName"
+        android:layout_toEndOf="@id/enable_alert"
+        >
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:text="Transmit thru Satellite"
+            android:layout_margin="10dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView
+            android:id="@+id/nameOfFreq"
+            android:layout_below="@id/checkbox"
+            android:visibility="gone"
+            android:text="Frequency:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignStart="@+id/checkbox"
+            android:layout_marginStart="12dp" />
+        <Spinner
+            android:id="@+id/frequency"
+            android:layout_below="@id/nameOfFreq"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+        <CheckBox
+            android:id="@+id/alertTransmit"
+            android:text="Alerts Transmission"
+            android:layout_margin="10dp"
+            android:layout_below="@id/frequency"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

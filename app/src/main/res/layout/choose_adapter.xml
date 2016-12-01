@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/all_sensors_name"
+        android:text="Hello"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:layout_margin="30dp"
+        android:layout_width="550dp"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/already_added"
+        android:background="@drawable/checkmark_icon"
+        android:visibility="invisible"
+        android:layout_margin="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+       />
+
+</LinearLayout>

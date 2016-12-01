@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">NmeaSensors</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="transmit_frequency">
+        <item>30 min </item>
+        <item>1 hour </item>
+        <item>2 hours</item>
+        <item>6 hours</item>
+        <item>12 hours</item>
+        <item>24 hours</item>
+    </string-array>
+    <string-array name="trigger_type">
+        <item>Above</item>
+        <item>Less</item>
+        <item>Equal</item>
+        <item>Different</item>
+
+    </string-array>
+    <string name="title_activity_gauge_test">GaugeTestActivity</string>
+
+
+</resources>

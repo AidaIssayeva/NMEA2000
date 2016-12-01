@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/choose_temper"
+        android:textSize="25sp"
+        android:text="Temperature measurement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="40dp"
+        android:layout_margin="20dp" />
+    <include android:id="@+id/radioTemp"
+        android:layout_below="@id/choose_temper"
+        layout="@layout/radiogroup_view"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/choose_pressure"
+        android:textSize="25sp"
+        android:text="Pressure measurement"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/radioTemp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+      />
+    <include android:id="@+id/radioPress"
+        android:layout_below="@id/choose_pressure"
+        layout="@layout/radiogroup_view"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/choose_wind"
+        android:textSize="25sp"
+        android:text="Wind speed measurement"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/radioPress"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        />
+    <include android:id="@+id/radioWind"
+        android:layout_below="@id/choose_wind"
+        layout="@layout/radiogroup_view"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/choose_angle"
+        android:textSize="25sp"
+        android:text="Wind angle measurement"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/radioWind"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        />
+    <include android:id="@+id/radioAngle"
+        android:layout_below="@id/choose_angle"
+        layout="@layout/radiogroup_view"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/gotoSensors"
+        android:text="Go to Sensors"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioWind"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="86dp" />
+
+
+
+</RelativeLayout>
